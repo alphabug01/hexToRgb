@@ -2,17 +2,19 @@ body{
   font-size: 1.5rem;
   background-color: rgba(18,52,86,0.3);
 }
-form > div {
-	position: relative;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 80%;
 }
 
-form > div > label {
-  position: absolute;
-}
-
-.wrap-input{
-  border: none;
-}
+form > div { position: relative; }
+form > div > label { position: absolute; }
+.wrap-input{ border: none; }
 
 form input {
   border: none;
@@ -22,18 +24,8 @@ form input {
   background: transparent;
 }
 
-form input:focus + label,
-form input:valid + label {
-  display: none;
-}
-
-form input:not(:valid){
-  box-shadow: none;
-}
-
-form input:focus {
-  outline: none;
-}
+form input:not(:valid){ box-shadow: none; }
+form input:focus { outline: none; }
 
 form label {
   position: absolute;
@@ -41,11 +33,7 @@ form label {
   top: 5px;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100vh;
-  width: 80%;
+form input:focus + label,
+form input:valid + label {
+  display: none;
 }
