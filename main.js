@@ -55,7 +55,6 @@ rgbToHex = () => {
 };
 
 changeForeground = () => {
-  console.log(a);
   if (+r + +g + +b <= 382) {
     lightForeground();
     if (a && a <= 0.5) darkForeground();
@@ -86,9 +85,7 @@ lightForeground = () => {
 };
 
 validate = (r, g, b, a = -1) => {
-  if(!r) return false;
-  if(!g) return false;
-  if(!b) return false;
+  if((!r && r!=0)|| (!g && g!=0) || (!b && b!=0)) return false;
   if(!a && a!=-1 && a!='NaN') return false;
   return true;
 };
